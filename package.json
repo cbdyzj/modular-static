@@ -1,0 +1,32 @@
+{
+  "name": "modular-static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node scripts/static_dev.mjs",
+    "clean": "node scripts/static_clean.mjs",
+    "build": "node scripts/static_build.mjs"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbdyzj/modular-static.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbdyzj/modular-static/issues"
+  },
+  "homepage": "https://github.com/cbdyzj/modular-static#readme",
+  "devDependencies": {
+    "esbuild": "^0.7.1",
+    "express": "^4.17.1",
+    "less": "^3.12.2",
+    "postcss": "^7.0.32",
+    "postcss-modules": "^3.2.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
