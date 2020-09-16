@@ -6,7 +6,12 @@
   "scripts": {
     "dev": "node scripts/static_dev.mjs",
     "clean": "node scripts/static_clean.mjs",
-    "build": "node scripts/static_build.mjs"
+    "build": "node scripts/static_build.mjs",
+    "render": "node scripts/static_render.mjs"
+  },
+  "engines": {
+    "node": ">=14.9.0",
+    "yarn": "^1.22.5"
   },
   "type": "module",
   "repository": {
