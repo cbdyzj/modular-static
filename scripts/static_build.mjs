@@ -25,7 +25,7 @@ async function compileFile(srcFilePath, destFilePath) {
     // js module
     if (/.+\.(mjs|jsx|ts|tsx)$/.test(srcFilePath)) {
         const transformed = await transformEsm(srcFilePath)
-        if (/deps\..*\.mjs/.test(basename(srcFilePath))) {
+        if (/deps(\..*)?\.mjs/.test(basename(srcFilePath))) {
             collectDeps(transformed)
         }
         await writeFile(destFilePath, transformed)
