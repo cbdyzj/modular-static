@@ -29,6 +29,9 @@ export async function transformCss(filePath) {
         const injection = `
         ;(function (encoded) {
                 var text = decodeURIComponent(encoded);
+                if (typeof document === 'undefined') {
+                    return
+                }
                 var style = document.createElement('style');
                 style.innerHTML = text;
                 document.head.appendChild(style);
