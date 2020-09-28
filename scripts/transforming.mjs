@@ -28,10 +28,10 @@ export async function transformCss(filePath) {
     function inject(css, exports = {}) {
         const injection = `
         ;(function (encoded) {
-                var text = decodeURIComponent(encoded);
                 if (typeof document === 'undefined') {
                     return
                 }
+                var text = decodeURIComponent(encoded);
                 var style = document.createElement('style');
                 style.innerHTML = text;
                 document.head.appendChild(style);
